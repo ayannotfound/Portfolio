@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Anand | Full-Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Ayan</span>
+                <span class="logo-underscore">_</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting">
+                    <span class="greeting-text">Hey there! 👋</span>
+                </div>
+                <h1 class="hero-title">
+                    I'm <span class="highlight">Ayush Anand</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    Full-Stack Developer & AI Enthusiast
+                </h2>
+                <p class="hero-description">
+                    I build intelligent applications that solve real-world problems. 
+                    From face recognition systems to AI chatbots, I love creating 
+                    things that make a difference.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Live Demos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">welcome.js</span>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span class="code-text">
+                                <span class="keyword">const</span> 
+                                <span class="class-name">developer</span> = {
+                            </span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span class="code-text">
+                                &nbsp;&nbsp;<span class="property">name</span>: 
+                                <span class="string">"Ayush"</span>,
+                            </span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">3</span>
+                            <span class="code-text">
+                                &nbsp;&nbsp;<span class="property">skills</span>: 
+                                [<span class="string">"Python"</span>, <span class="string">"JavaScript"</span>],
+                            </span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">4</span>
+                            <span class="code-text">
+                                &nbsp;&nbsp;<span class="property">focus</span>: 
+                                <span class="string">"AI & Full-Stack"</span>
+                            </span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">5</span>
+                            <span class="code-text">
+                                };
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the person behind the code</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll fade-left">
+                    <p class="about-intro">
+                        I'm a final-year <strong>BCA student at Birla Institute of Technology, Mesra</strong>, 
+                        graduating in 2026. My journey in tech started with curiosity and has evolved 
+                        into a passion for creating intelligent applications.
+                    </p>
+                    <p>
+                        What sets me apart is my love for blending <strong>AI/ML technologies</strong> 
+                        with practical web development. I don't just build projects—I create solutions 
+                        that solve real problems, from face recognition attendance systems to 
+                        real-time chat applications.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item animate-on-scroll fade-up">
+                            <i class="fas fa-trophy"></i>
+                            <span>3rd Place at BIT Mesra Codefest</span>
+                        </div>
+                        <div class="highlight-item animate-on-scroll fade-up">
+                            <i class="fas fa-rocket"></i>
+                            <span>5+ Live Project Demos</span>
+                        </div>
+                        <div class="highlight-item animate-on-scroll fade-up">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML Integration Expert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-grid animate-on-scroll fade-right">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Socket.IO</span>
+                            <span class="skill-tag">Jetpack Compose</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases & Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">Render</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my technical versatility and creativity</p>
+            </div>
+            <div class="projects-grid stagger-animation">
+                <!-- FaceTrace Project -->
+                <div class="project-card featured animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/FaceTrace" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://facetrace-c6di.onrender.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">🧑‍💻</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">FaceTrace</h3>
+                            <span class="project-badge">Featured</span>
+                        </div>
+                        <p class="project-description">
+                            Automatic attendance system using real-time face recognition. 
+                            Built with Flask and OpenCV for browser-based face registration and tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EchoRoom Project -->
+                <div class="project-card featured animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/EchoRoom" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://echoroom.onrender.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">💬</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">EchoRoom</h3>
+                            <span class="project-badge">Featured</span>
+                        </div>
+                        <p class="project-description">
+                            Full-stack real-time chat application with cookie-based authentication, 
+                            persistent storage, and live messaging using Socket.IO.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">Socket.IO</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LexiCounsel Project -->
+                <div class="project-card animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/LexiCounsel" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">⚖️</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">LexiCounsel</h3>
+                            <span class="project-badge award">🏆 3rd Place</span>
+                        </div>
+                        <p class="project-description">
+                            AI-powered Android assistant with modern chat UI using Jetpack Compose. 
+                            Provides intelligent legal query assistance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Jetpack Compose</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NotGPT Project -->
+                <div class="project-card animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/NotGPT" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://notgpt.onrender.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">🤖</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NotGPT</h3>
+                        <p class="project-description">
+                            Humorous chatbot mimicking ChatGPT interface. Integrated Groq LLM API 
+                            with native Android extension.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Groq API</span>
+                            <span class="tech-tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SkyCast Project -->
+                <div class="project-card animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/SkyCast" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://skycast-glo2.onrender.com/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">☀️</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SkyCast</h3>
+                        <p class="project-description">
+                            Weather web application with live weather data, UV index, 
+                            and AQI information using OpenWeatherMap API.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenWeatherMap API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Summary Project -->
+                <div class="project-card animate-on-scroll scale-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/ayannotfound/Article-Summary" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-icon">📚</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Article-Summary</h3>
+                        <p class="project-description">
+                            Desktop GUI application for fetching and summarizing news articles 
+                            using NLP techniques with NLTK and Newspaper3k.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">Newspaper3k</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta animate-on-scroll fade-up">
+                <a href="https://github.com/ayannotfound?tab=repositories" target="_blank" class="btn btn-outline">
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-up">
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">My journey in tech and learning</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll fade-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>BCA Student</h3>
+                            <span class="timeline-company">Birla Institute of Technology, Mesra</span>
+                            <span class="timeline-date">2023 - 2026</span>
+                        </div>
+                        <p class="timeline-description">
+                            Currently pursuing Bachelor of Computer Applications with focus on 
+                            software development, data structures, and artificial intelligence.
+                        </p>
+                        <div class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mesra, India
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll fade-right">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Intern</h3>
+                            <span class="timeline-company">The Sparks Foundation (GRIP)</span>
+                            <span class="timeline-date">May 2025</span>
+                        </div>
+                        <p class="timeline-description">
+                            Developed a full-stack banking system website with frontend and backend functionality. 
+                            Implemented user authentication, transactions, and database integration. 
+                            Gained experience in Git workflows and collaborative project development.
+                        </p>
+                        <div class="timeline-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Remote
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications">
+                <h3 class="animate-on-scroll fade-up">Certifications</h3>
+                <div class="cert-grid stagger-animation">
+                    <div class="cert-item animate-on-scroll scale-in">
+                        <div class="cert-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Python (Basic) Certificate</h4>
+                            <span class="cert-issuer">HackerRank</span>
+                            <a href="https://www.hackerrank.com/certificates/39d81f007787" target="_blank" class="cert-link">
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cert-item animate-on-scroll scale-in">
+                        <div class="cert-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Problem Solving (Basic) Certificate</h4>
+                            <span class="cert-issuer">HackerRank</span>
+                            <a href="https://www.hackerrank.com/certificates/11debdb01525" target="_blank" class="cert-link">
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll fade-up">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Have a project in mind? Let's make it happen!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card animate-on-scroll fade-left">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>ayanwastaken0@gmail.com</p>
+                            <a href="mailto:ayanwastaken0@gmail.com" class="contact-link">Send Email</a>
+                        </div>
+                    </div>
+                    <div class="contact-card animate-on-scroll fade-left">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>@ayannotfound</p>
+                            <a href="https://github.com/ayannotfound" target="_blank" class="contact-link">View Profile</a>
+                        </div>
+                    </div>
+                    <div class="contact-card animate-on-scroll fade-left">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>ayush-anand-420590306</p>
+                            <a href="https://linkedin.com/in/ayush-anand-420590306" target="_blank" class="contact-link">Connect</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container animate-on-scroll fade-right">
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="f93f2201-5d80-4a4f-8fa0-110dd3024659">
+                        <input type="hidden" name="subject" value="New Portfolio Contact">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject-input">Subject</label>
+                            <input type="text" id="subject-input" name="custom_subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <!-- Honeypot spam protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">Ayan</span>
+                        <span class="logo-underscore">_</span>
+                    </div>
+                    <p class="footer-description">
+                        Building intelligent applications that solve real-world problems.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Projects</h4>
+                        <a href="https://facetrace-c6di.onrender.com/" target="_blank">FaceTrace</a>
+                        <a href="https://echoroom.onrender.com/" target="_blank">EchoRoom</a>
+                        <a href="https://notgpt.onrender.com/" target="_blank">NotGPT</a>
+                        <a href="https://skycast-glo2.onrender.com/" target="_blank">SkyCast</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/ayannotfound" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/ayush-anand-420590306" target="_blank">LinkedIn</a>
+                        <a href="mailto:ayanwastaken0@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush Anand. Crafted with ❤️ and lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Vanta.js Background Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
