@@ -97,6 +97,9 @@ body.light-mode .nav {
 .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
+    display: flex;           /* ensure no whitespace gap between items */
+    align-items: center;
+    gap: 0;                  /* no space between name and underscore */
 }
 
 .logo-text {
@@ -198,6 +201,7 @@ body.light-mode .nav {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     padding: 0 0 40px;
@@ -1024,7 +1028,7 @@ body:not(.light-mode) .form-group textarea:focus {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0; /* remove gap so underscore touches name */
 }
 
 .footer-logo .logo-text {
@@ -1285,20 +1289,23 @@ body:not(.light-mode) .form-group textarea:focus {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
         top: 70px;
+        left: 0;
+        right: 0;
+        transform: translateX(-100%);
+        will-change: transform;
         flex-direction: column;
         background-color: var(--background);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: transform 0.3s ease;
         box-shadow: var(--shadow);
         padding: 2rem 0;
         z-index: 999;
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
     }
 
     .nav-toggle {
@@ -1491,7 +1498,8 @@ body:not(.light-mode) .form-group textarea:focus {
     
     .hero {
         padding: 80px 0 40px;
-        min-height: 90vh;
+        /* Keep height stable on small screens */
+        min-height: 100svh;
     }
     
     .hero-container {
@@ -1696,15 +1704,17 @@ body:not(.light-mode) .form-group textarea:focus {
     }
     
     .footer-links {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        /* Keep three columns even on small phones as requested */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
         order: 2;
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
     }
     
     .footer-section {
-        text-align: center;
+        /* Keep left-aligned so links stack naturally */
+        text-align: left;
     }
     
     .footer-section h4 {
@@ -1718,7 +1728,8 @@ body:not(.light-mode) .form-group textarea:focus {
         font-size: 0.95rem;
         margin-bottom: 0.75rem;
         padding: 0.25rem 0;
-        display: inline-block;
+        display: block; /* stack vertically, one per line */
+        width: 100%;
     }
     
     .footer-bottom {
@@ -1809,8 +1820,9 @@ body:not(.light-mode) .form-group textarea:focus {
     }
     
     .footer-links {
-        gap: 1.5rem;
-        max-width: 300px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        max-width: 100%;
     }
     
     .footer-section h4 {
@@ -1821,6 +1833,8 @@ body:not(.light-mode) .form-group textarea:focus {
     .footer-section a {
         font-size: 0.9rem;
         margin-bottom: 0.5rem;
+        display: block;
+        width: 100%;
     }
     
     .footer-bottom {
@@ -2113,4 +2127,29 @@ body.loaded {
         opacity: 1 !important;
         transform: none !important;
     }
+}
+
+/* Project screenshots inside cards */
+.project-image {
+    position: relative;
+}
+
+.project-image img.project-screenshot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: block; /* reserve space, controlled via opacity */
+}
+
+.project-image img.project-screenshot.loaded {
+    opacity: 1;
+}
+
+.project-image img.project-screenshot.error {
+    display: none; /* hide broken image icon if load fails */
 }

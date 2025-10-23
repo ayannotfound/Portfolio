@@ -624,6 +624,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         document.querySelectorAll('img[data-src]').forEach(img => {
+            // Prepare load/error handlers before setting src so we can toggle visibility
+            img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
+            img.addEventListener('error', () => img.classList.add('error'), { once: true });
             imageObserver.observe(img);
         });
     }
@@ -727,7 +730,8 @@ function initVantaBackground() {
                         canvas.style.top = '0';
                         canvas.style.left = '0';
                         canvas.style.width = '100%';
-                        canvas.style.height = '100vh';
+                        // Use small viewport height on mobile to avoid jump when address bar hides
+                        canvas.style.height = '100svh';
                         canvas.style.zIndex = '-1';
                     }
                 }
