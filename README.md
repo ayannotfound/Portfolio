@@ -9,7 +9,7 @@ _I build practical, fast, no‑nonsense web & AI things. This repo is the code b
 ---
 
 ## Why this exists
-I wanted something that: loads fast, isn't a React boilerplate clone, looks clean in dark mode at 2 AM, and doubles as a quick résumé snapshot. So I wrote it in plain HTML/CSS/JS. No build step. No webpack config soul‑drain. Just code you can read in one sitting.
+I wanted something that: loads fast, isn't a React boilerplate clone, looks clean in dark mode at 2 AM, and doubles as a quick résumé snapshot. So I wrote it in plain HTML/CSS/JS. No build steps. No webpack config soul‑drain. Just code you can read in one sitting.
 
 ## Me (compressed)
 - BCA @ BIT Mesra
@@ -28,7 +28,7 @@ I wanted something that: loads fast, isn't a React boilerplate clone, looks clea
 | Mobile | Kotlin + Jetpack Compose (select projects) |
 | Infra / Deploy | Render, GitHub Pages, lightweight Docker when required |
 
-Minimal dependencies → fewer surprises.
+Minimal dependencies -> fewer surprises.
 
 ---
 
@@ -49,7 +49,6 @@ Minimal dependencies → fewer surprises.
 **Vanilla first** – If I can solve it with a few hundred lines of JS, I do.  
 **Own the CSS** – 2k+ lines, yes—but it’s intentional: tokens, layering, no Tailwind churn.  
 **Performance > cleverness** – Fewer redraws, throttled observers, zero client frameworks.  
-**Readable over “smart”** – Future me > present ego.  
 **Dark mode done right** – Not just inverted colors; tuned contrasts & subtle motion.
 
 ---
@@ -60,9 +59,6 @@ portfolio/
 ├── index.html        # Markup – semantic & lean
 ├── styles.css        # Design system, theming, layout, animations
 ├── script.js         # Theme toggle, section reveals, interactions
-├── data.json         # Projects / skills / experience source of truth
-├── Ayush Resume.pdf  # Primary resume
-├── AyushResume.pdf   # Alt/older export
 └── README.md         # This document
 ```
 
@@ -71,7 +67,6 @@ portfolio/
 ## Core Bits (tech in plain words)
 **Theming** – CSS custom properties + localStorage persistence + prefers-color-scheme detection.  
 **Animations** – IntersectionObserver for progressive reveal; no scroll-jank listeners.  
-**Content** – `data.json` hydrates project & skill sections (edit once, reflected everywhere).  
 **Accessibility** – Focus states preserved; contrast tuned; semantic headings kept logical.  
 **Performance** – No frameworks, no transpile step, no runtime hydration overhead.
 
@@ -89,7 +84,7 @@ Visit: http://localhost:8000
 
 ## Quick Resume Snapshot
 **Roles I've simulated building**: real-time messaging, face recognition pipelines, AI interaction layers, mobile-first chat UX, legal research assistant flows.  
-**Strengths**: turning vague ideas into working prototypes fast, then tightening UX/perf loop.  
+**Strengths**: adapting quickly, turning vague ideas into working prototypes fast, then tightening UX/perf loop.  
 **Weak edges (improving)**: deeper infra automation & larger distributed systems scaling.
 
 ---
@@ -108,17 +103,15 @@ Visit: http://localhost:8000
 | Add a project | Append to `projects` array in `data.json` |
 | Tweak palette | Edit CSS vars at top of `styles.css` |
 | Adjust reveal behavior | Modify observer logic in `script.js` |
-| Swap resume | Replace `Ayush Resume.pdf` (keep filename) |
 
 ---
 
 ## Contact
-I reply faster if there's context.
 
 | Channel | Link |
 | ------- | ---- |
 | Email | [ayanwastaken0@gmail.com](mailto:ayanwastaken0@gmail.com) |
-| LinkedIn | https://www.linkedin.com/in/ayush-anand-420590306/ |
+| LinkedIn | https://www.linkedin.com/in/ayannotfound/ |
 | GitHub | https://github.com/ayannotfound |
 
 ---
