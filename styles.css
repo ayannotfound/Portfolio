@@ -58,6 +58,8 @@ body.light-mode {
 
 html {
     scroll-behavior: smooth;
+    /* Prevent any horizontal overflow from influencing viewport width on mobile */
+    overflow-x: hidden;
 }
 
 body {
@@ -1088,8 +1090,8 @@ body:not(.light-mode) .form-group textarea:focus {
 /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: calc(30px + env(safe-area-inset-bottom, 0px));
+    right: calc(30px + env(safe-area-inset-right, 0px));
     width: 50px;
     height: 50px;
     background: var(--primary-color);
@@ -1127,8 +1129,8 @@ body:not(.light-mode) .form-group textarea:focus {
 
 @media (max-width: 768px) {
     .scroll-to-top {
-        bottom: 20px;
-        right: 20px;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        right: calc(20px + env(safe-area-inset-right, 0px));
         width: 45px;
         height: 45px;
         font-size: 1rem;
@@ -2022,22 +2024,52 @@ body:not(.light-mode) .form-group textarea:focus {
     color: var(--primary-color);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
+/* Custom scrollbar - desktop only to avoid mobile gutter issues */
+@media (hover: hover) and (pointer: fine) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--background-alt);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-hover);
+    }
 }
 
-::-webkit-scrollbar-track {
-    background: var(--background-alt);
+/* Mobile: remove visible scrollbar/gutter without affecting desktop */
+@media (hover: none) and (pointer: coarse) {
+    /* Keep scrolling functional but hide scrollbar UI and avoid reserving space */
+    html, body {
+        /* Do not reserve gutter on mobile */
+        scrollbar-gutter: auto;
+        /* Hide scrollbar in Firefox/old Edge while keeping scroll */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+
+    /* Hide WebKit scrollbars on mobile (Chrome/Safari/Android) */
+    *::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+    }
+    *::-webkit-scrollbar-track { background: transparent !important; }
+    *::-webkit-scrollbar-thumb { background: transparent !important; }
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-hover);
+/* Fallback for devices that don't report coarse pointer correctly */
+@media (max-width: 1024px) {
+    html, body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    *::-webkit-scrollbar { width: 0 !important; height: 0 !important; }
+    *::-webkit-scrollbar-track { background: transparent !important; }
+    *::-webkit-scrollbar-thumb { background: transparent !important; }
 }
 
 /* Ripple animation for skill tags */
