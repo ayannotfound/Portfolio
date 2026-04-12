@@ -768,3 +768,30 @@ function updateVantaTheme() {
         }
     }
 }
+
+// Toggle extra certificates
+function toggleCerts() {
+    const certs = document.querySelectorAll('.extra-cert');
+    const btn = document.getElementById('view-more-certs-btn');
+    
+    let isHidden = false;
+    if (certs.length > 0) {
+        isHidden = certs[0].style.display === 'none' || certs[0].style.display === '';
+    }
+    
+    certs.forEach(cert => {
+        if (isHidden) {
+            cert.style.display = 'flex';
+            setTimeout(() => cert.classList.add('animate-in'), 10);
+        } else {
+            cert.style.display = 'none';
+            cert.classList.remove('animate-in');
+        }
+    });
+    
+    if (isHidden) {
+        btn.innerHTML = 'View Less';
+    } else {
+        btn.innerHTML = 'View More';
+    }
+}
